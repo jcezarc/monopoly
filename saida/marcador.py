@@ -1,6 +1,6 @@
 import logging
 
-logging.basicConfig(level=logging.INFO, filename='banco_imobiliario.log')
+logging.basicConfig(level=logging.INFO, filename='monopoly.log')
 
 MAIS_SALDO = '\n\t\tSaldo: {:.2f} + {:.2f} = {:.2f}'
 MAIS_SALDO_DE = MAIS_SALDO.replace('Saldo:', '{}:')
