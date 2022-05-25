@@ -69,6 +69,6 @@ Um Comportamento é uma classe que contém regras para decidir a compra de uma c
 ---
 ## Como rodar
 Para executar o jogo, use:
-> `python ./BancoImobiliario`
+> `python ./monopoly`
 
 ou o equivalente no seu sistema operacional.
