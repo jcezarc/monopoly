@@ -2,9 +2,9 @@ import logging
 
 logging.basicConfig(level=logging.INFO, filename='monopoly.log')
 
-MAIS_SALDO = '\n\t\tSaldo: {:.2f} + {:.2f} = {:.2f}'
-MAIS_SALDO_DE = MAIS_SALDO.replace('Saldo:', '{}:')
-MENOS_SALDO = '\n\t\tSaldo: {:.2f} - {:.2f} = {:.2f}'
+MSG_AUMENTA_SALDO = '\n\t\tSaldo: {:.2f} + {:.2f} = {:.2f}'
+MSG_SALDO_PROPRIETARIO = MSG_AUMENTA_SALDO.replace('Saldo:', '{}:')
+MSG_DIMINUI_SALDO = '\n\t\tSaldo: {:.2f} - {:.2f} = {:.2f}'
 
 
 class Marcador:
@@ -23,11 +23,11 @@ class Marcador:
                 jogador.nome,
                 casa.endereco+1,
                 casa.dono.nome,
-                MENOS_SALDO.format(
+                MSG_DIMINUI_SALDO.format(
                     jogador.saldo, casa.valor_aluguel,
                     jogador.saldo - casa.valor_aluguel,
                 ),
-                MAIS_SALDO_DE.format( 
+                MSG_SALDO_PROPRIETARIO.format( 
                     casa.dono.nome,
                     casa.dono.saldo, casa.valor_aluguel,
                     casa.dono.saldo + casa.valor_aluguel,
@@ -44,7 +44,7 @@ class Marcador:
             logging.info('\t[+] Casa {} vendida para {}{}'.format(
                 casa.endereco+1,
                 jogador.nome,
-                MENOS_SALDO.format(
+                MSG_DIMINUI_SALDO.format(
                     jogador.saldo, casa.custo_venda,
                     jogador.saldo - casa.custo_venda,
                 )
@@ -99,7 +99,7 @@ class Marcador:
             valor = args[1]
             logging.info('\t @  {} completou +1 volta{}'.format(
                 jogador.nome,
-                MAIS_SALDO.format(
+                MSG_AUMENTA_SALDO.format(
                     jogador.saldo, valor,
                     jogador.saldo + valor,
                 )
