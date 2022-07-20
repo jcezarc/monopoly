@@ -52,7 +52,12 @@ def roda_simulacoes(classe_jogo, qt_jogos=DEFAULT_QT_JOGOS):
 
 def mostra_resumo(simulacao):
     print('='*50)
-    print('::::::::: RESUMO E ESTATISTICAS :::::::::')
+    print(' MONOPOLY '.center(50, ':'))
+    print('''
+            Simulação de jogo com
+            vários comportamentos
+            de jogadores
+    ''')
     print('-'*50)
     print('\tTotal de partidas = {}'.format(simulacao.total))
     print(
